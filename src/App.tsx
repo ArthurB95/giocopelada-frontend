@@ -577,17 +577,17 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin }) => {
             <div>
                 <h4 className="text-white font-bold mb-4">Produto</h4>
                 <ul className="space-y-2">
-                    <li><a href="#" className="hover:text-emerald-400">Funcionalidades</a></li>
-                    <li><a href="#" className="hover:text-emerald-400">Preços</a></li>
+                    <li><a href="#!" className="hover:text-emerald-400">Funcionalidades</a></li>
+                    <li><a href="#!" className="hover:text-emerald-400">Preços</a></li>
                     <li><a href="#" className="hover:text-emerald-400">App Mobile</a></li>
                 </ul>
             </div>
              <div>
                 <h4 className="text-white font-bold mb-4">Suporte</h4>
                 <ul className="space-y-2">
-                    <li><a href="#" className="hover:text-emerald-400">Central de Ajuda</a></li>
-                    <li><a href="#" className="hover:text-emerald-400">Termos de Uso</a></li>
-                    <li><a href="#" className="hover:text-emerald-400">Privacidade</a></li>
+                    <li><a href="#!" className="hover:text-emerald-400">Central de Ajuda</a></li>
+                    <li><a href="#!" className="hover:text-emerald-400">Termos de Uso</a></li>
+                    <li><a href="#!" className="hover:text-emerald-400">Privacidade</a></li>
                 </ul>
             </div>
         </div>
