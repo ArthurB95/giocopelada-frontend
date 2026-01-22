@@ -579,7 +579,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin }) => {
                 <ul className="space-y-2">
                     <li><a href="#!" className="hover:text-emerald-400">Funcionalidades</a></li>
                     <li><a href="#!" className="hover:text-emerald-400">Preços</a></li>
-                    <li><a href="#" className="hover:text-emerald-400">App Mobile</a></li>
+                    <li><a href="#!" className="hover:text-emerald-400">App Mobile</a></li>
                 </ul>
             </div>
              <div>
