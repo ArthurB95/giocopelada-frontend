@@ -4,7 +4,7 @@ import {
   CheckCircle, Clock, Settings, LogOut, 
   Menu, X, ChevronRight, Share2, Star, Plus, 
   LayoutDashboard, User, Shield, ArrowRight, Play,
-  LucideIcon, Zap, Smartphone, Heart, Award, Lock, Mail
+  LucideIcon, Zap, Lock, Mail
 } from 'lucide-react';
 
 // --- STYLES FOR ANIMATIONS ---
