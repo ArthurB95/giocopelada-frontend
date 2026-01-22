@@ -325,7 +325,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin }) => {
         {/* Hero Image Mockup (Dashboard Simulation) */}
         <div className="mt-10 relative mx-auto max-w-5xl animate-fade-in-up animate-delay-300">
            {/* Floating Badge 1 */}
-           <div className="absolute -left-4 top-20 z-10 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float hidden md:flex">
+           <div className="absolute -left-4 bottom-20 z-10 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float hidden md:flex">
               <div className="bg-green-100 p-2 rounded-lg text-green-600"><CheckCircle className="w-6 h-6" /></div>
               <div>
                   <p className="text-xs text-slate-500 font-bold uppercase">Pagamento</p>
