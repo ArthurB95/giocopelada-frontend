@@ -323,7 +323,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin }) => {
         </div>
 
         {/* Hero Image Mockup (Dashboard Simulation) */}
-        <div className="mt-10 relative mx-auto max-w-5xl animate-fade-in-up animate-delay-300">
+        <div className="mt-10 relative mx-auto max-w-5xl animate-fade-in-up animate-delay-300 hidden md:block">
            {/* Floating Badge 1 */}
            <div className="absolute -left-4 bottom-20 z-10 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float hidden md:flex">
               <div className="bg-green-100 p-2 rounded-lg text-green-600"><CheckCircle className="w-6 h-6" /></div>
@@ -417,16 +417,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onLogin }) => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Trust Bar */}
-      <div className="bg-slate-900 py-10 border-y border-slate-800">
-          <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-8 md:gap-16 text-slate-400 font-medium">
-              <div className="flex items-center gap-2"><Shield className="w-5 h-5 text-emerald-500" /> Dados Seguros</div>
-              <div className="flex items-center gap-2"><Users className="w-5 h-5 text-emerald-500" /> +10k Jogadores</div>
-              <div className="flex items-center gap-2"><Star className="w-5 h-5 text-emerald-500" /> 4.9/5 Avaliação</div>
-              <div className="flex items-center gap-2"><Zap className="w-5 h-5 text-emerald-500" /> Suporte 24/7</div>
-          </div>
       </div>
 
       {/* Advantages Section */}
