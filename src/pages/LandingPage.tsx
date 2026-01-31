@@ -39,7 +39,6 @@ const styles = `
 `;
 
 const LandingPage = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 

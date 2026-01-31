@@ -4,11 +4,6 @@ import Button from "../components/Button";
 import Badge from "../components/Badge";
 import Header from "../components/Header";
 
-interface GameAdminViewProps {
-  game: Game;
-  onBack: () => void;
-}
-
 type GameRole = "admin" | "player";
 type GameStatus = "active" | "inactive";
 type UserStatus =

@@ -12,7 +12,7 @@ type UserStatus =
   | "pending_approval"
   | "pending";
 type PaymentStatus = "paid" | "pending";
-type ParticipantType = "mensalista" | "avulso" | "visitante";
+//type ParticipantType = "mensalista" | "avulso" | "visitante";
 
 interface Game {
   id: number;
