@@ -1,12 +1,6 @@
 import { LayoutDashboard, Trophy, User } from "lucide-react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
-interface AppLayoutProps {
-  children: React.ReactNode;
-  activeTab: string;
-  onTabChange: (tab: string) => void;
-}
-
 const Header: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
