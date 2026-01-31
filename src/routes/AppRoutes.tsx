@@ -21,9 +21,9 @@ export const AppRoutes = () => {
     navigate("/CreateGame");
   };
 
-  const handleLoginSuccess = () => {
+  /*const handleLoginSuccess = () => {
     navigate("/dashboard");
-  };
+  };*/
 
   return (
       <Routes>

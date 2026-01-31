@@ -2,9 +2,9 @@ import { LucideIcon, Trophy, Lock, ArrowRight, Mail } from "lucide-react";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 
-interface LoginScreenProps {
+/*interface LoginScreenProps {
   onLoginSuccess: () => void;
-}
+}*/
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;

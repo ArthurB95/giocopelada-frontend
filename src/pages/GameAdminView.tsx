@@ -14,7 +14,7 @@ type UserStatus =
 type PaymentStatus = "paid" | "pending";
 type ParticipantType = "mensalista" | "avulso" | "visitante";
 
-interface Game {
+/*interface Game {
   id: number;
   name: string;
   sport: string;
@@ -26,7 +26,7 @@ interface Game {
   price?: number;
   userStatus?: UserStatus;
   paymentStatus?: PaymentStatus;
-}
+}*/
 
 interface Participant {
   id: number;

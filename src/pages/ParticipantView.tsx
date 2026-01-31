@@ -28,10 +28,10 @@ interface Game {
   paymentStatus?: PaymentStatus;
 }
 
-interface ParticipantViewProps {
+/*interface ParticipantViewProps {
   game: Game;
   onBack: () => void;
-}
+}*/
 
 interface Review {
   id: number;
