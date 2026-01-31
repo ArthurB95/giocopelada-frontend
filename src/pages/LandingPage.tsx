@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import AdvantagesSection from "../components/AdvantagesSection";
 import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
@@ -39,18 +38,11 @@ const styles = `
 `;
 
 const LandingPage = () => {
-  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
 
   const handleNavigation = () => {
     navigate("/login");
   };
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
