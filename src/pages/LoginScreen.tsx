@@ -45,9 +45,9 @@ const navigate = useNavigate();
     navigate("/dashboard");
   };
 
-  const handleGoHome = () => {
+  /*const handleGoHome = () => {
     navigate("/");
-  };
+  };*/
 
 
   return (

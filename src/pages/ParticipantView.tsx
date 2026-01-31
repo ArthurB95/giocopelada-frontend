@@ -4,7 +4,7 @@ import Badge from "../components/Badge";
 import Button from "../components/Button";
 import Header from "../components/Header";
 
-type GameRole = "admin" | "player";
+/*type GameRole = "admin" | "player";
 type GameStatus = "active" | "inactive";
 type UserStatus =
   | "confirmed"
@@ -12,9 +12,9 @@ type UserStatus =
   | "pending_approval"
   | "pending";
 type PaymentStatus = "paid" | "pending";
-type ParticipantType = "mensalista" | "avulso" | "visitante";
+type ParticipantType = "mensalista" | "avulso" | "visitante";*/
 
-interface Game {
+/*interface Game {
   id: number;
   name: string;
   sport: string;
@@ -26,7 +26,7 @@ interface Game {
   price?: number;
   userStatus?: UserStatus;
   paymentStatus?: PaymentStatus;
-}
+}8?
 
 /*interface ParticipantViewProps {
   game: Game;
