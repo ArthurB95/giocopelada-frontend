@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowRight, Calendar, CheckCircle, Share2, Users } from "lucide-react";
+import { ArrowRight, Calendar, Check, CheckCircle, Share2, Users, X } from "lucide-react";
 import Button from "../components/Button";
 import Badge from "../components/Badge";
 import Header from "../components/Header";
@@ -70,6 +71,11 @@ const MOCK_PARTICIPANTS: Participant[] = [
 const GameAdminView: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [confirmModal, setConfirmModal] = useState<{
+    isOpen: boolean;
+    type: "approve" | "reject";
+    participantName: string | null;
+  }>({ isOpen: false, type: "approve", participantName: null });
 
   const game = location.state?.game;
 
@@ -164,7 +170,38 @@ const GameAdminView: React.FC = () => {
                       <CheckCircle className="w-3 h-3 mr-1" /> Pago
                     </span>
                   )}
-                  <Badge status={p.status} />
+                  {p.status === "pending" ? (
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() =>
+                          setConfirmModal({
+                            isOpen: true,
+                            type: "reject",
+                            participantName: p.name,
+                          })
+                        }
+                        className="p-1.5 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 border border-red-100 transition-colors"
+                        title="Reprovar"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={() =>
+                          setConfirmModal({
+                            isOpen: true,
+                            type: "approve",
+                            participantName: p.name,
+                          })
+                        }
+                        className="p-1.5 rounded-lg bg-emerald-50 text-emerald-600 hover:bg-emerald-100 border border-emerald-100 transition-colors"
+                        title="Aprovar"
+                      >
+                        <Check className="w-4 h-4" />
+                      </button>
+                    </div>
+                  ) : (
+                    <Badge status={p.status} />
+                  )}
                 </div>
               </div>
             ))}
@@ -173,6 +210,46 @@ const GameAdminView: React.FC = () => {
             Ver lista completa
           </button>
         </div>
+
+        {/* Confirmation Modal */}
+        {confirmModal.isOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in-up">
+            <div className="bg-white rounded-2xl p-6 shadow-2xl max-w-sm w-full">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">
+                {confirmModal.type === "approve"
+                  ? "Aprovar Visitante"
+                  : "Reprovar Visitante"}
+              </h3>
+              <p className="text-slate-600 mb-6">
+                Tem certeza que deseja{" "}
+                {confirmModal.type === "approve" ? "aprovar" : "reprovar"} a
+                entrada de <strong>{confirmModal.participantName}</strong>?
+              </p>
+              <div className="flex gap-3">
+                <Button
+                  variant="ghost"
+                  className="flex-1"
+                  onClick={() =>
+                    setConfirmModal({ ...confirmModal, isOpen: false })
+                  }
+                >
+                  Cancelar
+                </Button>
+                <Button
+                  variant={
+                    confirmModal.type === "approve" ? "primary" : "danger"
+                  }
+                  className="flex-1"
+                  onClick={() => {
+                    setConfirmModal({ ...confirmModal, isOpen: false });
+                  }}
+                >
+                  Confirmar
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
