@@ -83,6 +83,10 @@ const GameAdminView: React.FC = () => {
     navigate(-1);
   };
 
+    const onDrawTeams = () => {
+    navigate('/teamdraw');
+  };
+
   if (!game) return <div className="p-8">Erro: Jogo não selecionado.</div>;
 
   return (
@@ -113,7 +117,7 @@ const GameAdminView: React.FC = () => {
         <Button variant="secondary" className="bg-emerald-600 hover:bg-emerald-700 w-full" icon={Share2}>
           Lista WhatsApp
         </Button>
-        <Button variant="secondary" className="w-full" icon={Users}>
+        <Button variant="secondary" className="w-full" icon={Users} onClick={onDrawTeams}>
           Sortear Times
         </Button>
       </div>

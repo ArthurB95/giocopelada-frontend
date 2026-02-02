@@ -6,6 +6,7 @@ import GameAdminView from "../pages/GameAdminView";
 import UserProfile from "../pages/UserProfile";
 import ParticipantView from "../pages/ParticipantView";
 import CreateGameScreen from "../pages/CreateGameScreen";
+import TeamDrawScreen from "../pages/TeamDrawScreen";
 
 export const AppRoutes = () => {
 
@@ -37,6 +38,8 @@ export const AppRoutes = () => {
         <Route path="/gameadminview" element={<GameAdminView />} />
 
         <Route path="/userprofile" element={<UserProfile />} />
+
+        <Route path="/teamdraw" element={<TeamDrawScreen />} />
 
         <Route path="/creategame" element={<CreateGameScreen onCancel={() => navigate(-1)} />} />
 
